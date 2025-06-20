@@ -1,0 +1,157 @@
+main > .contenedorCuerpoVideo > .textos-12 {
+    display: flex;
+    min-height: 100vh;
+    position: relative;
+    z-index: 2;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 0 20px;
+}
+
+main > .contenedorCuerpoVideo > .textos-12 > h1 {
+    font-size: 50px;
+    color: white;
+    font-family: "Zen Dots";
+}
+
+main > .contenedorCuerpoVideo > .textos-12 > h2 {
+    font-family: "Zen Dots";
+    font-size: 40px;
+    font-weight: 300;
+    color: white;
+}
+
+main > .contenedorCuerpoVideo > video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -100;
+}
+
+
+main > .contenedorCuerpoVideo > .capa {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  opacity: 1;
+  mix-blend-mode: overlay;
+  z-index: 0; 
+}
+
+main > .contenedorCuerpoTarjetas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #030303;
+    width: 100%;
+    padding: 100px 20px;
+    gap: 20px;
+}
+
+main > .contenedorCuerpoTarjetas > .tarjeta {
+    position: relative;
+    width: 90%;
+    max-width: 400px;
+    height: 250px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 0 30px 1px rgba(255, 1, 1, 0.459);
+    transition: transform 0.3s ease;
+}
+
+main > .contenedorCuerpoTarjetas > .tarjeta > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+main > .contenedorCuerpoTarjetas > .tarjeta:hover img {
+    transform: scale(1.05);
+}
+
+main > .contenedorCuerpoTarjetas > .tarjeta > .capaTarjeta {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    text-align: center;
+}
+
+main > .contenedorCuerpoTarjetas > .tarjeta:hover .capaTarjeta {
+    opacity: 1;
+}
+
+main > .contenedorCuerpoTarjetas > .tarjeta > .capaTarjeta > a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    background: rgba(252, 89, 89, 0.1);
+    border-radius: 5px;
+    width: 90%;
+    height: auto;
+    text-align: center;
+    font-family: "Zen Dots";
+    font-size: 30px;
+    cursor: pointer;
+}
+
+
+@media (max-width: 768px) {
+    main > .contenedorCuerpoVideo > .textos-12 > h1 {
+        font-size: 36px;
+    }
+
+    main > .contenedorCuerpoVideo > .textos-12 > h2 {
+        font-size: 28px;
+    }
+
+    main > .contenedorCuerpoTarjetas > .tarjeta {
+        height: 220px;
+    }
+
+    main > .contenedorCuerpoTarjetas > .tarjeta > .capaTarjeta > a {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    main > .contenedorCuerpoVideo > .textos-12 > h1 {
+        font-size: 28px;
+    }
+
+    main > .contenedorCuerpoVideo > .textos-12 > h2 {
+        font-size: 20px;
+    }
+
+    main > .contenedorCuerpoTarjetas > .tarjeta {
+        height: 200px;
+    }
+
+    main > .contenedorCuerpoTarjetas > .tarjeta > .capaTarjeta > a {
+        font-size: 20px;
+        padding: 8px 16px;
+    }
+}

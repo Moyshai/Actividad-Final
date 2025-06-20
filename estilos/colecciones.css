@@ -1,0 +1,199 @@
+main > .contenedorColecciones {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 100px;
+    background-color: #030303;
+    color: #f0f0f0;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+main > .contenedorColecciones > h1 {
+    margin-bottom: 40px;
+    font-weight: 700;
+    font-size: 2.5rem;
+    color: #ffffff;
+    letter-spacing: 0.05em;
+    font-family: "Zen Dots";
+}
+
+
+main > .contenedorColecciones > .envolturaSlider {
+    position: relative;
+    width: 100%;
+    max-width: 1220px;
+    overflow-x: auto;
+    padding: 20px 0;
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+}
+
+
+main > .contenedorColecciones > .envolturaSlider::-webkit-scrollbar {
+    display: none;
+}
+
+
+main > .contenedorColecciones > .envolturaSlider > .pistaSlider {
+    display: flex;
+    gap: 30px;
+}
+
+
+main > .contenedorColecciones > .envolturaSlider > .pistaSlider > .diapositiva {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    overflow: hidden;
+    width: 280px;
+    height: 540px;
+    flex-shrink: 0;
+    transition: transform 0.25s ease;
+}
+
+main > .contenedorColecciones > .envolturaSlider > .pistaSlider > .diapositiva:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+}
+
+
+main > .contenedorColecciones > .envolturaSlider > .pistaSlider > .diapositiva > img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    transition: filter 0.3s ease;
+}
+
+main > .contenedorColecciones > .envolturaSlider > .pistaSlider > .diapositiva:hover > img {
+    filter: brightness(1);
+}
+
+
+main > .contenedorColecciones > .envolturaSlider > .pistaSlider > .diapositiva > .contenidoDiapositiva {
+    padding: 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 10px;
+}
+
+
+main > .contenedorColecciones > .envolturaSlider > .pistaSlider > .diapositiva > .contenidoDiapositiva > h2 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #222;
+    font-family: "Zen Dots";
+}
+
+
+main > .contenedorColecciones > .envolturaSlider > .pistaSlider > .diapositiva > .contenidoDiapositiva > .botonMas {
+    align-self: flex-start;
+    background-color: #111;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 2px 8px rgba(17,17,17,0.2);
+    text-decoration: none;
+    margin-bottom: 20px;
+}
+
+main > .contenedorColecciones > .envolturaSlider > .pistaSlider > .diapositiva > .contenidoDiapositiva > .botonMas:hover {
+    background-color: #444;
+    box-shadow: 0 4px 12px rgba(68,68,68,0.3);
+}
+
+
+main > .contenedorColecciones > .envolturaSlider > .botonSlider {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0,0,0,0.5);
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 2;
+    user-select: none;
+}
+
+main > .contenedorColecciones > .envolturaSlider > .botonSlider.anterior {
+    left: 0;
+}
+
+main > .contenedorColecciones > .envolturaSlider > .botonSlider.siguiente {
+    right: 0;
+}
+
+
+@media (max-width: 768px) {
+    main {
+        padding-top: 100px;
+    }
+    main > .contenedorColecciones > h1 {
+        text-align: center;
+    }
+
+    main > .contenedorColecciones > .envolturaSlider {
+        max-width: 310px; 
+        margin: 0 auto;
+        padding: 0;
+        overflow-x: auto;
+    }
+
+    main > .contenedorColecciones > .envolturaSlider > .pistaSlider > .diapositiva {
+        width: 280px;
+        max-width: 280px;
+        min-width: 280px;
+        height: 520px;
+    }
+
+
+    main > .contenedorColecciones > .envolturaSlider > .botonSlider {
+        display: none;
+    }
+}
+
+
+@media (max-width: 480px) {
+    main > .contenedorColecciones > h1 {
+        font-size: 2rem;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+
+    main > .contenedorColecciones > .envolturaSlider {
+        max-width: 200px; 
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    main > .contenedorColecciones > .envolturaSlider > .pistaSlider > .diapositiva {
+        width: 180px;
+        max-width: 180px;
+        min-width: 180px;
+        height: 340px; 
+    }
+
+    main > .contenedorColecciones > .envolturaSlider > .pistaSlider > .diapositiva > img {
+        height: 200px;
+        object-fit: cover;
+    }
+
+    main > .contenedorColecciones > .envolturaSlider > .pistaSlider > .diapositiva > .contenidoDiapositiva {
+        height: auto;
+        padding: 10px;
+    }
+}
